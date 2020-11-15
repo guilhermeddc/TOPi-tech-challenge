@@ -12,7 +12,4 @@ app.use(routes);
 
 app.use(errors());
 
-app.listen(3333);
-
-// eslint-disable-next-line no-console
-console.log('\nApi running...');
+app.listen(process.env.PORT || 3333);

@@ -8,7 +8,7 @@ import './styles.css';
 const Home: React.FC = () => {
   return (
     <div className="Home">
-      <header className="Home-header">
+      <header className="Home-header container">
         <img src={logo} className="Home-logo" alt="logo" />
         <p>The repositories with the most stars of your favorite language.</p>
         <Link className="Home-link" to="/repository">

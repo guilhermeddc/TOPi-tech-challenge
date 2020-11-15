@@ -6,6 +6,7 @@
 .Home-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-bottom: 64px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +27,7 @@
 
 .Home-link {
   color: #61dafb;
+  margin-top: 32px;
 }
 
 @keyframes Home-logo-spin {

@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import api from "../services/api";
+import {Request, Response} from 'express';
+import api from '../services/api';
 
 interface ResForApi {
   id: number;
@@ -18,16 +18,16 @@ interface ResForApi {
 
 class RepositoryController {
   async index(req: Request, res: Response) {
-    const { page = 1, per_page = 10, sort = "stars" } = req.query;
-    const { lang } = req.params;
+    const {page = 1, per_page = 10, sort = 'stars'} = req.query;
+    const {lang} = req.params;
 
     try {
-      const { data: responseForApi } = await api.get(
-        `/repositories?q=language:${lang}&sort=${sort}&page=${page}&per_page=${per_page}`
+      const {data: responseForApi} = await api.get(
+        `/repositories?q=language:${lang}&sort=${sort}&page=${page}&per_page=${per_page}`,
       );
 
       const resForApiSerialized = (responseForApi.items as ResForApi[]).map(
-        (item) => {
+        item => {
           return {
             id: item.id,
             name: item.name,
@@ -42,14 +42,12 @@ class RepositoryController {
             language: item.language,
             forks_count: item.forks_count,
           };
-        }
+        },
       );
 
       return res.status(200).json(resForApiSerialized);
     } catch (error) {
-      return res
-        .status(400)
-        .json({ error: `System internal error -> ${error}` });
+      return res.status(400).json({error: `System internal error -> ${error}`});
     }
   }
 }
