@@ -1,0 +1,90 @@
+.Card {
+  width: 100%;
+  min-width: 300px;
+  max-width: 616px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  position: relative;
+  color: #282c34;
+  background-color: aliceblue;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.Card-header {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 2px solid #282c34;
+  min-height: 80px;
+}
+
+.Card-header h3 {
+  font-size: 1.5rem;
+  margin-left: 16px;
+}
+
+.Card-header a {
+  transition: all 0.3s;
+}
+
+.Card-header a:hover {
+  opacity: 0.7;
+}
+
+.Card-header a img {
+  width: 100%;
+  display: block;
+  max-width: 3.5rem;
+  border-radius: 40px;
+}
+
+.Card-main {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+.Card-main-header {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.Card-main-header div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.Card-main-header div p {
+  margin-left: 16px;
+}
+
+.Card-main-description {
+  font-size: calc(10px + 1vmin);
+}
+
+@media only screen and (max-width: 768px) {
+  .Repository-content {
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+.Card-footer {
+  height: 100%;
+  min-height: 80px;
+  max-height: 80px;
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  border-top: 2px solid #282c34;
+  align-items: center;
+}
+
+.Card-footer div {
+  display: flex;
+}

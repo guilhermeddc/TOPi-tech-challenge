@@ -1,0 +1,16 @@
+.Loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #282c3466;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.Loading.active {
+  display: flex;
+}
